@@ -5,18 +5,13 @@
     box-sizing: border-box;
 }
 
-body {
-  min-width: 425px;
-}
 
 main {
     display: flex;
     flex-direction: column;
-    align-items: center;
+align-items: center;
    font-family: "Poppins", sans-serif;
    background-color: rgb(255, 248, 239);
-   padding: 1rem;
-   gap: 2rem;
 }
 
 #dogs, #cats, #hamsters, #fishes, #sweet-fishes {
@@ -24,21 +19,27 @@ min-height: 60vh;
 background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
-display: grid;
+display: flex;
+flex-wrap: wrap;
+flex-direction: row;
 border-radius: 20px;
 padding: 1rem;
+align-items: center;
+width: 90%;
+margin: 1rem auto;
 }
 
 #dog-house, #cat-house, #hamster-house, #salt-water, #sweet-water {
 display:flex;
 flex-direction: row;
 flex-wrap: wrap;
-width: 100%;
+width: 90%;
+margin: 0 auto;
 height: 100%;
 justify-content: center;
 align-items: center;
 gap: 1rem;
-position: relative;
+padding: 10px 0;
 }
 
 #dogs h1, #cats h1, #hamsters h1, #fishes h1, #sweet-fishes h1{
@@ -49,6 +50,10 @@ position: relative;
   background-color: beige;
   height: fit-content;
   width: fit-content;
+  max-width: 80%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   padding: 1rem;
   border-radius: 20px;
   margin: 0 auto 30px auto;
@@ -81,7 +86,9 @@ flex-direction: column;
 z-index: 2;
 justify-content: center;
 align-items: center;
-margin: 1rem;
+max-width: 80%;
+margin: 10px auto;
+position: relative;
 }
 
 .blur-effect {
@@ -103,7 +110,8 @@ margin: 1rem;
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  margin-bottom: 10px;
+  width: 80%;
+  margin:0 auto 10px auto;
 }
 
 /* Immagine animale */
@@ -114,13 +122,15 @@ margin: 1rem;
 
 /* Colonna bottoni */
 .interaction-panel {
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
+  display: flex;
+  flex-direction: column;
+flex-wrap: wrap;
   justify-items: center;
+  align-items: center;
   border-radius: 30px;
   padding: 0.4rem;
   gap: 1rem;
-  width: 90%;
+  max-width: 90%;
   margin: 0 auto;
 }
 
@@ -214,24 +224,40 @@ min-height: 60vh;
 background-size: cover;
 background-repeat: no-repeat;
 background-position: center;
-display: grid;
 }
 
-#dog-house, #cat-house, #hamster-house, #salt-water, #sweet-water {
+/* #dog-house, #cat-house, #hamster-house, #salt-water, #sweet-water {
 display: grid;
 grid-template-columns: repeat(2, 1fr);
 column-gap: 2rem;
-justify-items: start;
+justify-items: center;
 width: 90%;
 margin: 0 auto;
-}
+} */
 
 .animal-container {
 display: flex;
   flex-direction: column;
 align-items: center;
 justify-content: center;
-max-width: 100%;
+max-width: 90%;
+margin: 0 auto;
 }
-    
+
+.interaction-panel {
+  display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+width: 90%;
+  border-radius: 30px;
+  padding: 0.4rem;
+  gap: 1rem;
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+.display-btn {
+  width: 100%;
+  max-width: 100%;
+}
+
 }
