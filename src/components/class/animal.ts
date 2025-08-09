@@ -1,6 +1,6 @@
 
-import { AnimalInterface } from "../interfaces/animal-interface.js";
-import type { StatoFame, StatoEnergia, StatoIgiene, StatoUmore, AmbientiAcquatici } from "../types.js";
+import { AnimalInterface } from "../interfaces/animal-interface";
+import type { StatoFame, StatoEnergia, StatoIgiene, StatoUmore, AmbientiAcquatici } from "../types";
 
 export abstract class Animals implements AnimalInterface {
   constructor(

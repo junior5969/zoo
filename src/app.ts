@@ -1,15 +1,18 @@
-import { Animals } from "./components/class/animal.js";
+import { Animals } from "./components/class/animal";
 
-import { Cane } from "./components/class/cane.js";
-import { Gatto } from "./components/class/gatto.js";
-import { Criceto } from "./components/class/criceto.js";
-import { Pesce } from "./components/class/pesce.js";
+import { Cane } from "./components/class/cane";
+import { Gatto } from "./components/class/gatto";
+import { Criceto } from "./components/class/criceto";
+import { Pesce } from "./components/class/pesce";
 
-import { StatoEnergia, StatoFame, StatoIgiene, StatoUmore } from "./components/types.js";
-import { AmbientiAcquatici } from "./components/types.js";
+import { StatoEnergia, StatoFame, StatoIgiene, StatoUmore } from "./components/types";
+import { AmbientiAcquatici } from "./components/types";
 
-import {renderAnimalCard, appendToHabitat } from "./components/render.js"; 
-import { interact } from "./components/controller.js";
+import {renderAnimalCard, appendToHabitat } from "./components/render"; 
+import { interact } from "./components/controller";
+
+import '../style.css';
+
 
 //creo un tipo personalizzato per tipizzare l'array data
 export type AnimalData =

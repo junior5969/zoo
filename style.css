@@ -50,23 +50,23 @@ gap: 1rem;
 }
 
 #dogs {
-background-image: url(/image/erbetta.jpg);
+background-image: url(/img/erbetta.jpg);
 }
 
 #cats {
-background-image: url(/image/strada.jpg);
+background-image: url(/img/strada.jpg);
 }
 
 #hamsters {
-background-image: url(/image/campagna.jpg);
+background-image: url(/img/campagna.jpg);
 }
 
 #fishes {
-background-image: url(/image/oceano.jpg);
+background-image: url(/img/oceano.jpg);
 }
 
 #sweet-fishes {
-background-image: url(/image/oceano.jpg);
+background-image: url(/img/oceano.jpg);
 }
 
 .animal-container {

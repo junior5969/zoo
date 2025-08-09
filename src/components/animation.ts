@@ -1,9 +1,9 @@
 
-import { Animals } from "./class/animal.js";
-import { Cane } from "./class/cane.js";
-import { Gatto } from "./class/gatto.js";
-import { Criceto } from "./class/criceto.js";
-import { Pesce } from "./class/pesce.js";
+import { Animals } from "./class/animal";
+import { Cane } from "./class/cane";
+import { Gatto } from "./class/gatto";
+import { Criceto } from "./class/criceto";
+import { Pesce } from "./class/pesce";
 
 
 

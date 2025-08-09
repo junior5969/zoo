@@ -1,6 +1,6 @@
 
-import { Animals } from "./animal.js";
-import type { StatoFame, StatoEnergia, StatoUmore, AmbientiAcquatici } from "../types.js";
+import { Animals } from "./animal";
+import type { StatoFame, StatoEnergia, StatoUmore, AmbientiAcquatici } from "../types";
 
 export class Pesce extends Animals {
   

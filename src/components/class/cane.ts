@@ -1,7 +1,7 @@
 
-import { Animals } from "./animal.js";
-import { Lavabile } from "../interfaces/animal-interface.js";
-import type { StatoFame, StatoEnergia, StatoIgiene, StatoUmore } from "../types.js";
+import { Animals } from "./animal";
+import { Lavabile } from "../interfaces/animal-interface";
+import type { StatoFame, StatoEnergia, StatoIgiene, StatoUmore } from "../types";
 
 export class Cane extends Animals implements Lavabile {
   

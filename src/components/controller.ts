@@ -1,11 +1,11 @@
 
-import { Animals } from "./class/animal.js";
+import { Animals } from "./class/animal";
 
-import { Lavabile } from "./interfaces/animal-interface.js";
+import { Lavabile } from "./interfaces/animal-interface";
 
-import { ButtonType, getButtonEmoji } from "./animation.js";
+import { ButtonType, getButtonEmoji } from "./animation";
 
-import { getAnimalImage } from "./render.js";
+import { getAnimalImage } from "./render";
 
 // Funzione che al click di ogni bottone gestisce: aggiorare stato, alternare scomparsa/comparsa di display ed emoji 
 function handleAction(
