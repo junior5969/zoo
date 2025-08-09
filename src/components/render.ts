@@ -6,6 +6,7 @@ import { Cane } from "./class/cane";
 import { Gatto } from "./class/gatto";       
 import { Pesce } from "./class/pesce";
 
+
 //creo una funzione che genera una emoji che rappresenta l'animale in base al tipo 
 export function getAnimalEmoji(animale: Animals): string {
   if (animale instanceof Cane) return "🐕";
@@ -17,13 +18,12 @@ export function getAnimalEmoji(animale: Animals): string {
 
 //creo una funzione che genera una immagine che rappresenta l'animale in base al tipo 
 export function getAnimalImage(animale: Animals): string {
-  if (animale instanceof Cane) return "../img/fibi.png";
-  if (animale instanceof Gatto) return "../img/barney.png";
-  if (animale instanceof Criceto) return "../img/cioppi.png";
-  if (animale instanceof Pesce) return "../img/cleo.png";
-  return "../img/default.png"; // immagine di fallback
+  if (animale instanceof Cane) return "img/fibi.png";
+  if (animale instanceof Gatto) return "img/barney.png";
+  if (animale instanceof Criceto) return "img/cioppi.png";
+  if (animale instanceof Pesce) return "img/cleo.png";
+  return "img/default.png"; // fallback
 }
-
 //creo una funzione che genera una card per ogni animale con la rispettiva emoji
 export function renderAnimalCard(animale: Animals): HTMLElement {
 
