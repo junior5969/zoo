@@ -10,16 +10,6 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./img/barney.png":
-/*!************************!*\
-  !*** ./img/barney.png ***!
-  \************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("{module.exports = __webpack_require__.p + \"img/barney.png\";\n\n//# sourceURL=webpack://zoo/./img/barney.png?\n}");
-
-/***/ }),
-
 /***/ "./img/campagna.jpg":
 /*!**************************!*\
   !*** ./img/campagna.jpg ***!
@@ -30,36 +20,6 @@ eval("{module.exports = __webpack_require__.p + \"img/campagna.jpg\";\n\n//# sou
 
 /***/ }),
 
-/***/ "./img/cioppi.png":
-/*!************************!*\
-  !*** ./img/cioppi.png ***!
-  \************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("{module.exports = __webpack_require__.p + \"img/cioppi.png\";\n\n//# sourceURL=webpack://zoo/./img/cioppi.png?\n}");
-
-/***/ }),
-
-/***/ "./img/cleo.png":
-/*!**********************!*\
-  !*** ./img/cleo.png ***!
-  \**********************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("{module.exports = __webpack_require__.p + \"img/cleo.png\";\n\n//# sourceURL=webpack://zoo/./img/cleo.png?\n}");
-
-/***/ }),
-
-/***/ "./img/default.png":
-/*!*************************!*\
-  !*** ./img/default.png ***!
-  \*************************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("{module.exports = __webpack_require__.p + \"img/default.png\";\n\n//# sourceURL=webpack://zoo/./img/default.png?\n}");
-
-/***/ }),
-
 /***/ "./img/erbetta.jpg":
 /*!*************************!*\
   !*** ./img/erbetta.jpg ***!
@@ -67,16 +27,6 @@ eval("{module.exports = __webpack_require__.p + \"img/default.png\";\n\n//# sour
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 eval("{module.exports = __webpack_require__.p + \"img/erbetta.jpg\";\n\n//# sourceURL=webpack://zoo/./img/erbetta.jpg?\n}");
-
-/***/ }),
-
-/***/ "./img/fibi.png":
-/*!**********************!*\
-  !*** ./img/fibi.png ***!
-  \**********************/
-/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
-
-eval("{module.exports = __webpack_require__.p + \"img/fibi.png\";\n\n//# sourceURL=webpack://zoo/./img/fibi.png?\n}");
 
 /***/ }),
 
@@ -286,7 +236,7 @@ eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpa
   \**********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   appendToHabitat: () => (/* binding */ appendToHabitat),\n/* harmony export */   getAnimalEmoji: () => (/* binding */ getAnimalEmoji),\n/* harmony export */   getAnimalImage: () => (/* binding */ getAnimalImage),\n/* harmony export */   renderAnimalCard: () => (/* binding */ renderAnimalCard)\n/* harmony export */ });\n/* harmony import */ var _class_criceto__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./class/criceto */ \"./src/components/class/criceto.ts\");\n/* harmony import */ var _class_cane__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./class/cane */ \"./src/components/class/cane.ts\");\n/* harmony import */ var _class_gatto__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./class/gatto */ \"./src/components/class/gatto.ts\");\n/* harmony import */ var _class_pesce__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./class/pesce */ \"./src/components/class/pesce.ts\");\n/* harmony import */ var _img_fibi_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../img/fibi.png */ \"./img/fibi.png\");\n/* harmony import */ var _img_barney_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../img/barney.png */ \"./img/barney.png\");\n/* harmony import */ var _img_cioppi_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../img/cioppi.png */ \"./img/cioppi.png\");\n/* harmony import */ var _img_cleo_png__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../img/cleo.png */ \"./img/cleo.png\");\n/* harmony import */ var _img_default_png__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../../img/default.png */ \"./img/default.png\");\n\n\n\n\n\n\n\n\n\n//creo una funzione che genera una emoji che rappresenta l'animale in base al tipo \nfunction getAnimalEmoji(animale) {\n    if (animale instanceof _class_cane__WEBPACK_IMPORTED_MODULE_1__.Cane)\n        return \"🐕\";\n    if (animale instanceof _class_gatto__WEBPACK_IMPORTED_MODULE_2__.Gatto)\n        return \"🐈\";\n    if (animale instanceof _class_criceto__WEBPACK_IMPORTED_MODULE_0__.Criceto)\n        return \"🐹\";\n    if (animale instanceof _class_pesce__WEBPACK_IMPORTED_MODULE_3__.Pesce)\n        return \"🐟\";\n    return \"❓\";\n}\n//creo una funzione che genera una immagine che rappresenta l'animale in base al tipo \nfunction getAnimalImage(animale) {\n    if (animale instanceof _class_cane__WEBPACK_IMPORTED_MODULE_1__.Cane)\n        return _img_fibi_png__WEBPACK_IMPORTED_MODULE_4__;\n    if (animale instanceof _class_gatto__WEBPACK_IMPORTED_MODULE_2__.Gatto)\n        return _img_barney_png__WEBPACK_IMPORTED_MODULE_5__;\n    if (animale instanceof _class_criceto__WEBPACK_IMPORTED_MODULE_0__.Criceto)\n        return _img_cioppi_png__WEBPACK_IMPORTED_MODULE_6__;\n    if (animale instanceof _class_pesce__WEBPACK_IMPORTED_MODULE_3__.Pesce)\n        return _img_cleo_png__WEBPACK_IMPORTED_MODULE_7__;\n    return _img_default_png__WEBPACK_IMPORTED_MODULE_8__; // immagine di fallback\n}\n//creo una funzione che genera una card per ogni animale con la rispettiva emoji\nfunction renderAnimalCard(animale) {\n    const container = document.createElement(\"div\");\n    container.classList.add(\"animal-container\");\n    const card = document.createElement(\"div\");\n    card.classList.add(\"animal-card\");\n    // Emoji\n    const emoji = document.createElement(\"span\");\n    emoji.textContent = getAnimalEmoji(animale);\n    emoji.classList.add(\"emoji\");\n    emoji.style.cursor = \"pointer\";\n    card.appendChild(emoji);\n    container.appendChild(card);\n    return container;\n}\n//funzione che inserisce in ogni sezione html un animale in base all'istanza di appartenenza\nfunction appendToHabitat(animale, elemento) {\n    var _a, _b, _c, _d, _e;\n    if (animale instanceof _class_cane__WEBPACK_IMPORTED_MODULE_1__.Cane) {\n        (_a = document.getElementById(\"dog-house\")) === null || _a === void 0 ? void 0 : _a.appendChild(elemento);\n    }\n    else if (animale instanceof _class_gatto__WEBPACK_IMPORTED_MODULE_2__.Gatto) {\n        (_b = document.getElementById(\"cat-house\")) === null || _b === void 0 ? void 0 : _b.appendChild(elemento);\n    }\n    else if (animale instanceof _class_criceto__WEBPACK_IMPORTED_MODULE_0__.Criceto) {\n        (_c = document.getElementById(\"hamster-house\")) === null || _c === void 0 ? void 0 : _c.appendChild(elemento);\n    }\n    else if (animale instanceof _class_pesce__WEBPACK_IMPORTED_MODULE_3__.Pesce) {\n        if (animale.habitat === \"acqua salata\") {\n            (_d = document.getElementById(\"salt-water\")) === null || _d === void 0 ? void 0 : _d.appendChild(elemento);\n        }\n        else {\n            (_e = document.getElementById(\"sweet-water\")) === null || _e === void 0 ? void 0 : _e.appendChild(elemento);\n        }\n    }\n}\n\n\n//# sourceURL=webpack://zoo/./src/components/render.ts?\n}");
+eval("{__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   appendToHabitat: () => (/* binding */ appendToHabitat),\n/* harmony export */   getAnimalEmoji: () => (/* binding */ getAnimalEmoji),\n/* harmony export */   getAnimalImage: () => (/* binding */ getAnimalImage),\n/* harmony export */   renderAnimalCard: () => (/* binding */ renderAnimalCard)\n/* harmony export */ });\n/* harmony import */ var _class_criceto__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./class/criceto */ \"./src/components/class/criceto.ts\");\n/* harmony import */ var _class_cane__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./class/cane */ \"./src/components/class/cane.ts\");\n/* harmony import */ var _class_gatto__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./class/gatto */ \"./src/components/class/gatto.ts\");\n/* harmony import */ var _class_pesce__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./class/pesce */ \"./src/components/class/pesce.ts\");\n\n\n\n\n//creo una funzione che genera una emoji che rappresenta l'animale in base al tipo \nfunction getAnimalEmoji(animale) {\n    if (animale instanceof _class_cane__WEBPACK_IMPORTED_MODULE_1__.Cane)\n        return \"🐕\";\n    if (animale instanceof _class_gatto__WEBPACK_IMPORTED_MODULE_2__.Gatto)\n        return \"🐈\";\n    if (animale instanceof _class_criceto__WEBPACK_IMPORTED_MODULE_0__.Criceto)\n        return \"🐹\";\n    if (animale instanceof _class_pesce__WEBPACK_IMPORTED_MODULE_3__.Pesce)\n        return \"🐟\";\n    return \"❓\";\n}\n//creo una funzione che genera una immagine che rappresenta l'animale in base al tipo \nfunction getAnimalImage(animale) {\n    if (animale instanceof _class_cane__WEBPACK_IMPORTED_MODULE_1__.Cane)\n        return \"img/fibi.png\";\n    if (animale instanceof _class_gatto__WEBPACK_IMPORTED_MODULE_2__.Gatto)\n        return \"img/barney.png\";\n    if (animale instanceof _class_criceto__WEBPACK_IMPORTED_MODULE_0__.Criceto)\n        return \"img/cioppi.png\";\n    if (animale instanceof _class_pesce__WEBPACK_IMPORTED_MODULE_3__.Pesce)\n        return \"img/cleo.png\";\n    return \"img/default.png\"; // fallback\n}\n//creo una funzione che genera una card per ogni animale con la rispettiva emoji\nfunction renderAnimalCard(animale) {\n    const container = document.createElement(\"div\");\n    container.classList.add(\"animal-container\");\n    const card = document.createElement(\"div\");\n    card.classList.add(\"animal-card\");\n    // Emoji\n    const emoji = document.createElement(\"span\");\n    emoji.textContent = getAnimalEmoji(animale);\n    emoji.classList.add(\"emoji\");\n    emoji.style.cursor = \"pointer\";\n    card.appendChild(emoji);\n    container.appendChild(card);\n    return container;\n}\n//funzione che inserisce in ogni sezione html un animale in base all'istanza di appartenenza\nfunction appendToHabitat(animale, elemento) {\n    var _a, _b, _c, _d, _e;\n    if (animale instanceof _class_cane__WEBPACK_IMPORTED_MODULE_1__.Cane) {\n        (_a = document.getElementById(\"dog-house\")) === null || _a === void 0 ? void 0 : _a.appendChild(elemento);\n    }\n    else if (animale instanceof _class_gatto__WEBPACK_IMPORTED_MODULE_2__.Gatto) {\n        (_b = document.getElementById(\"cat-house\")) === null || _b === void 0 ? void 0 : _b.appendChild(elemento);\n    }\n    else if (animale instanceof _class_criceto__WEBPACK_IMPORTED_MODULE_0__.Criceto) {\n        (_c = document.getElementById(\"hamster-house\")) === null || _c === void 0 ? void 0 : _c.appendChild(elemento);\n    }\n    else if (animale instanceof _class_pesce__WEBPACK_IMPORTED_MODULE_3__.Pesce) {\n        if (animale.habitat === \"acqua salata\") {\n            (_d = document.getElementById(\"salt-water\")) === null || _d === void 0 ? void 0 : _d.appendChild(elemento);\n        }\n        else {\n            (_e = document.getElementById(\"sweet-water\")) === null || _e === void 0 ? void 0 : _e.appendChild(elemento);\n        }\n    }\n}\n\n\n//# sourceURL=webpack://zoo/./src/components/render.ts?\n}");
 
 /***/ }),
 
