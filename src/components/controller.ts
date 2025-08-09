@@ -67,8 +67,46 @@ target.addEventListener("drop", (event) => {
 });
 
   actionPanel.appendChild(emojiButtonElement);
-}
 
+
+// --- Eventi mobile touch ---
+let isDragging = false;
+
+emojiButtonElement.addEventListener("touchstart", (event) => {
+  isDragging = true;
+  draggedEl = emojiButtonElement;
+  emojiButtonElement.style.opacity = "0.5";
+});
+
+emojiButtonElement.addEventListener("touchmove", (event) => {
+  if (!isDragging) return;
+  event.preventDefault();
+  // opzionale: muovi l'elemento insieme al dito, se vuoi
+});
+
+emojiButtonElement.addEventListener("touchend", (event) => {
+  if (!isDragging) return;
+  isDragging = false;
+  emojiButtonElement.style.opacity = "1";
+
+  // Recupera la posizione del tocco per capire se è dentro target
+  const touch = event.changedTouches[0];
+  const dropRect = target.getBoundingClientRect();
+
+  if (
+    touch.clientX > dropRect.left &&
+    touch.clientX < dropRect.right &&
+    touch.clientY > dropRect.top &&
+    touch.clientY < dropRect.bottom
+  ) {
+    target.appendChild(draggedEl!);
+    draggedEl = null;
+    display.classList.remove("hidden");
+    state.textContent = animale.getStatoGenerale();
+  }
+});
+
+}
 
 // ✅ Funzione principale per interazione con l’animale
 export function interact(animale: Animals, container: HTMLElement) {
