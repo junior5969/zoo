@@ -1,0 +1,231 @@
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+   font-family: "Poppins", sans-serif;
+   background-color: rgb(255, 248, 239);
+   padding: 1rem;
+   gap: 2rem;
+}
+
+#dogs, #cats, #hamsters, #fishes, #sweet-fishes {
+min-height: 60vh;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+display: grid;
+border-radius: 20px;
+padding: 1rem;
+}
+
+#dog-house, #cat-house, #hamster-house, #salt-water, #sweet-water {
+display:flex;
+flex-direction: row;
+flex-wrap: wrap;
+width: 100%;
+height: 100%;
+justify-content: center;
+align-items: center;
+gap: 1rem;
+}
+
+#dogs h1, #cats h1, #hamsters h1, #fishes h1, #sweet-fishes h1{
+     font-size: 2.2rem;
+   font-weight: 500;
+     font-family: "DynaPuff", system-ui;
+  text-align: center;
+  background-color: beige;
+  height: fit-content;
+  width: fit-content;
+  padding: 1rem;
+  border-radius: 20px;
+  margin: 0 auto 30px auto;
+  color: rgb(76, 48, 19);
+}
+
+#dogs {
+background-image: url(/image/erbetta.jpg);
+}
+
+#cats {
+background-image: url(/image/strada.jpg);
+}
+
+#hamsters {
+background-image: url(/image/campagna.jpg);
+}
+
+#fishes {
+background-image: url(/image/oceano.jpg);
+}
+
+#sweet-fishes {
+background-image: url(/image/oceano.jpg);
+}
+
+.animal-container {
+display: flex;
+flex-direction: column;
+z-index: 2;
+justify-content: center;
+align-items: center;
+margin-bottom: 1rem;
+}
+
+.blur-effect {
+    background: rgba(255, 254, 254, 0.222);
+  backdrop-filter: blur(4px);
+  border-radius: 30px;
+}
+
+.animal-card {
+  font-size: 3rem;
+  cursor: pointer;
+}
+
+/*PANEL*/
+
+.action-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 10px;
+}
+
+/* Immagine animale */
+.animal-image {
+  max-height: 200px;
+  object-fit: contain;
+}
+
+/* Colonna bottoni */
+.interaction-panel {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  justify-items: center;
+  border-radius: 30px;
+  padding: 0.4rem;
+  gap: 1rem;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.display-text {
+font-size: 1rem;
+}
+
+.display-btn {
+    border-radius: 20px;
+    padding: 8px 13px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+    width: fit-content;
+}
+
+.bubble-container {
+  position: relative;
+  width: max-content;
+  max-width: 80%;
+  margin: 10px;
+}
+
+.bubble {
+  position: relative;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  padding: 10px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* //La punta stile <() 
+.bubble::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;       // Più in basso per un triangolo più lungo 
+  left: 20px;           //Attaccato a sinistra 
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 15px solid transparent; // Allungamento verso destra 
+  border-top: 20px solid #f0f0f0; //Altezza/punta e colore 
+} */
+
+.hidden {
+    display: none;
+}
+
+.emoji-button {
+background-color: transparent;
+border: none;
+font-size: 2rem;
+text-align: center;
+cursor: grabbing;
+transform: scale(1.2);
+animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    70% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+.emoji-button:hover {
+  background: #f0f0f076;
+  backdrop-filter: blur(5px);
+  border-radius: 100%;
+}
+
+/*MEDIA QUERY*/
+
+@media screen and (min-width: 768px) {
+
+ main {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+   font-family: "Poppins", sans-serif;
+}
+
+#dogs, #cats, #hamsters, #fishes, #sweet-fishes {
+min-height: 60vh;
+background-size: cover;
+background-repeat: no-repeat;
+background-position: center;
+display: grid;
+}
+
+#dog-house, #cat-house, #hamster-house, #salt-water, #sweet-water {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+column-gap: 2rem;
+justify-items: center;
+width: 90%;
+margin: 0 auto;
+}
+
+.animal-container {
+display: flex;
+  flex-direction: column;
+align-items: center;
+justify-content: center;
+max-width: 100%;
+}
+    
+}
