@@ -54,15 +54,14 @@ target.addEventListener("dragover", (event) => {
   event.preventDefault();
     display.classList.remove("hidden");
     emojiButtonElement.remove();
-      state.textContent = animale.getStatoGenerale();
 });
 
 target.addEventListener("drop", (event) => {
   event.preventDefault();
   if (draggedEl) {
-   draggedEl.style.opacity = "1";
     target.appendChild(draggedEl); // sposto l’emoji nel target
     draggedEl = null;
+    state.textContent = animale.getStatoGenerale();
   }
 });
 
@@ -72,25 +71,58 @@ target.addEventListener("drop", (event) => {
 // --- Eventi mobile touch ---
 let isDragging = false;
 
+let originalX = 0;
+let originalY = 0;
+
+let offsetX = 0;
+let offsetY = 0;
+
 emojiButtonElement.addEventListener("touchstart", (event) => {
   isDragging = true;
-  draggedEl = emojiButtonElement;
-  emojiButtonElement.style.opacity = "0.5";
+
+    draggedEl = emojiButtonElement;
+
+    const rect = draggedEl.getBoundingClientRect(); //Metodo che restituisce un oggetto con informazioni sulla posizione e le dimensioni dell’elemento relative alla viewport
+    const touch = event.touches[0];
+
+   offsetX = touch.clientX - rect.left;
+   offsetY = touch.clientY - rect.top;
+
+   
+  // Salvo posizione originale per rollback
+  originalX = rect.left;
+  originalY = rect.top;
+
+
+  draggedEl.style.opacity = "0.5";
+  draggedEl.style.position = "absolute";
+  draggedEl.style.zIndex = "1000";
+  draggedEl.style.left = `${rect.left}px`;
+  draggedEl.style.top = `${rect.top}px`;
 });
 
 emojiButtonElement.addEventListener("touchmove", (event) => {
-  if (!isDragging) return;
-  event.preventDefault();
-  // opzionale: muovi l'elemento insieme al dito, se vuoi
+  if (!isDragging || !draggedEl) return; // Se non sto trascinando o non c'è elemento da spostare, esci subito
+  event.preventDefault(); // Blocca lo scroll/predefinito del browser
+
+  const touch = event.touches[0];           // Prendi la prima posizione del dito (clientX/clientY), questa posizione si aggiorna ad ogni spostamento del dito (quindi mentre si trascina)
+
+  const containerRect = target.getBoundingClientRect(); 
+
+  console.log(draggedEl);
+ draggedEl.style.position = "absolute";    // Serve perché left e top funzionino per spostare l'elemento
+  draggedEl.style.zIndex = "1000";          // Porta l'elemento sopra tutti gli altri, per visibilità
+  draggedEl.style.left = (touch.clientX - containerRect.left - offsetX) + "px";
+   draggedEl.style.top = (touch.clientY - containerRect.top - offsetY) + "px";
 });
 
-emojiButtonElement.addEventListener("touchend", (event) => {
-  if (!isDragging) return;
-  isDragging = false;
-  emojiButtonElement.style.opacity = "1";
 
-  // Recupera la posizione del tocco per capire se è dentro target
-  const touch = event.changedTouches[0];
+emojiButtonElement.addEventListener("touchend", (event) => {
+  if (!isDragging || !draggedEl) return;
+  isDragging = false; //Fine del move
+ 
+  //Posizione del tocco per capire se è dentro target
+  const touch = event.changedTouches[0]; //Posizione finale 
   const dropRect = target.getBoundingClientRect();
 
   if (
@@ -100,12 +132,19 @@ emojiButtonElement.addEventListener("touchend", (event) => {
     touch.clientY < dropRect.bottom
   ) {
     target.appendChild(draggedEl!);
+    emojiButtonElement.remove();
     draggedEl = null;
     display.classList.remove("hidden");
     state.textContent = animale.getStatoGenerale();
+  } else {
+    // Rollback posizione originale se drop fuori target
+    draggedEl.style.left = `${originalX}px`;
+    draggedEl.style.top = `${originalY}px`;
+    draggedEl.style.opacity = "1";
+    draggedEl.style.position = "static";
+    draggedEl.style.zIndex = "auto";
   }
 });
-
 }
 
 // ✅ Funzione principale per interazione con l’animale
